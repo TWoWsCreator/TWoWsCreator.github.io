@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boostra Консьерж</title>
+    <title>BoostraCons</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -37,16 +37,20 @@
         <div>
             <label for="date_birth">Введите Дату рождения</label>
         </div>
-        <input type="date" id="date_birth">
+        <input type="date" id="date_birth" placeholder="Введите Дату рождения">
         <div>
             <label for="region">Введите Регион (в формате: Московская область):</label>
         </div>
         <input type="text" id="region">
+        <button id="send_data">
+            Отправить данные
+        </button>
     </form>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
         let tg = window.Telegram.WebApp;
         let checkLoan = document.getElementById('check_loan');
+        tg.expa
 
         checkLoan.addEventListener('click', () => {
             document.getElementById('main').style.display = 'none';
