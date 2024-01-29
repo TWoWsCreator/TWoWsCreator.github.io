@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoostraCons</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <h1>Boostra Kонсьерж</h1>
+        <img src="main.png" alt="#">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur in expedita ex voluptate aspernatur. Et at accusamus adipisci veritatis quae.</p>
+        
+        <div>
+            <button id="juris_consultation">
+                Юридическая консультация
+            </button>
+        </div>
+        <div>
+            <button id="any_question">
+                Задать любой вопрос
+            </button>
+        </div>
+        <div>
+            <button id="check_loan">
+                Проверить долги
+            </button>
+        </div>
+        <form id="form">
+            <h1>Проверить долги</h1>
+            <div>
+                <label for="name">Введите ФИО (в формате: Иванов Иван Иванович):</label>
+            </div>
+            <input type="text" id="name">
+            <div>
+                <label for="date_birth">Введите Дату рождения</label>
+            </div>
+            <input type="date" id="date_birth">
+            <div>
+                <label for="region">Введите Регион (в формате: Московская область):</label>
+            </div>
+            <input type="text" id="region">
+        </form>
+        <script src="https://telegram.org/js/telegram-web-app.js"></script>
+        <script>
+            let tg = window.Telegram.WebApp;
+            let checkLoan = document.getElementById('check_loan');
+
+            checkLoan.addEventListener('click', () => {
+                document.getElementById('main').style.display = 'none';
+                document.getElementById('form').style.display = 'block';
+            });
+        </script>
+    </div>
+</body>
+</html>
