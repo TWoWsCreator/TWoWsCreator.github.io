@@ -27,31 +27,31 @@
                 Проверить долги
             </button>
         </div>
-        <form id="form">
-            <h1>Проверить долги</h1>
-            <div>
-                <label for="name">Введите ФИО (в формате: Иванов Иван Иванович):</label>
-            </div>
-            <input type="text" id="name">
-            <div>
-                <label for="date_birth">Введите Дату рождения</label>
-            </div>
-            <input type="date" id="date_birth">
-            <div>
-                <label for="region">Введите Регион (в формате: Московская область):</label>
-            </div>
-            <input type="text" id="region">
-        </form>
-        <script src="https://telegram.org/js/telegram-web-app.js"></script>
-        <script>
-            let tg = window.Telegram.WebApp;
-            let checkLoan = document.getElementById('check_loan');
-
-            checkLoan.addEventListener('click', () => {
-                document.getElementById('main').style.display = 'none';
-                document.getElementById('form').style.display = 'block';
-            });
-        </script>
     </div>
+    <form action="#" id="form">
+        <h1>Проверить долги</h1>
+        <div>
+            <label for="name">Введите ФИО (в формате: Иванов Иван Иванович):</label>
+        </div>
+        <input type="text" id="name">
+        <div>
+            <label for="date_birth">Введите Дату рождения</label>
+        </div>
+        <input type="date" id="date_birth">
+        <div>
+            <label for="region">Введите Регион (в формате: Московская область):</label>
+        </div>
+        <input type="text" id="region">
+    </form>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+        let tg = window.Telegram.WebApp;
+        let checkLoan = document.getElementById('check_loan');
+
+        checkLoan.addEventListener('click', () => {
+            document.getElementById('main').style.display = 'none';
+            document.getElementById('form').style.display = 'block';
+        });
+    </script>
 </body>
 </html>
