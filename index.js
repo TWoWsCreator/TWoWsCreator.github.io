@@ -23,10 +23,14 @@ checkLoan.addEventListener('click', () => {
     document.getElementById('form').style.display = 'block';
 });
 sendCheckLoanData.addEventListener('click', () => {
-    document.getElementById('main').style.display = 'block';
-    document.getElementById('form').style.display = 'none';
-    tg.MainButton.setText('Исполнительных производств нет, вы не являетесь ответчиком в городских и мировых судах');
-    tg.MainButton.show();
+    // document.getElementById('main').style.display = 'block';
+    // document.getElementById('form').style.display = 'none';
+    if (tg.MainButton.isVisible) {
+        tg.MainButton.hide();
+    } else {
+        tg.MainButton.setText('Test text');
+        tg.MainButton.show();
+    }
     // document.getElementById('main').style.display = 'block';
     // document.getElementById('form').style.display = 'none';
 });
