@@ -19,7 +19,7 @@
         </div>
         <div>
             <button id="any_question">
-                Задать любой вопрос
+                ❓Задать любой вопрос❓
             </button>
         </div>
         <div>
@@ -28,6 +28,19 @@
             </button>
         </div>
     </div>
+    <form action="#" id="chatgpt_form">
+        <h1>❓ Задать любой вопрос ❓</h1>
+        <div>
+            <label for="description">
+                Опишите вопрос как можно конкретнее, используя правильную грамматику и орфографию. 
+                Мне будет легче понять ваш запрос и правильно ответить на него. ⏱Время ответа: не более минуты
+            </label>
+        </div>
+        <input type="text" id="question">
+        <button id="send_question">
+            Отправить данные
+        </button>
+    </form>
     <form action="#" id="form">
         <h1>Проверить долги</h1>
         <div>
@@ -47,15 +60,32 @@
         </button>
     </form>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script>
+    <script src="index.js"></script>
+    <!-- <script>
         let tg = window.Telegram.WebApp;
         let checkLoan = document.getElementById('check_loan');
-        tg.expa
+        let sendCheckLoanData = document.getElementById('send_data');
+        let anyQuestion = document.getElementById('any_question');
+        let sendQuestion = document.getElementById('send_question');
+        tg.expand()
+
+        anyQuestion.addEventListener('click', () => {
+            document.getElementById('main').style.display = 'none';
+            document.getElementById('chatgpt_form').style.display = 'block';
+        });
+        sendQuestion.addEventListener('click', () => {
+            document.getElementById('main').style.display = 'block';
+            document.getElementById('chatgpt_form').style.display = 'none';
+        });
 
         checkLoan.addEventListener('click', () => {
             document.getElementById('main').style.display = 'none';
             document.getElementById('form').style.display = 'block';
         });
-    </script>
+        sendCheckLoanData.addEventListener('click', () => {
+            document.getElementById('main').style.display = 'block';
+            document.getElementById('form').style.display = 'none';
+        });
+    </script> -->
 </body>
 </html>
