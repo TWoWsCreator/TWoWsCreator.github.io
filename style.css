@@ -77,3 +77,8 @@ input:focus {
     display: none;
     text-align: center;
 }
+
+#chatgpt_form {
+    display: none;
+    text-align: center;
+}
